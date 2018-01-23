@@ -1,0 +1,86 @@
+.content-body {
+  margin-left: 135px;
+}
+
+#header {
+  height: 75px;
+  position: fixed;
+  top: 0px;
+  z-index: 99;
+  width: 100%;
+}
+
+#top-logo {
+  height: 60px;
+}
+
+#notifications {
+  color: blue;
+  float: right;
+}
+
+#sidenav, #sidenav-mini {
+  height: 100%;
+  position: fixed;
+  top: 75px;
+  padding-left: 0px;
+  padding-top: 3px;
+  background-color: #eceadf;
+}
+
+#content-body {
+ padding-top: 75px;
+}
+
+#minigutter {
+  display:none;
+}
+
+/*
+
+@media screen and (min-width: 40.063em) {
+*/
+
+@media only screen and (max-width: 1000px) {
+
+  #sidegutter {
+    display: none;
+  }
+
+  #minigutter {
+    display: block;
+  }
+
+}
+
+/*
+@media only screen and (max-width: 40em) {
+*/
+@media only screen and (max-width: 400px) {
+
+
+  #sidegutter {
+    display: none;
+  }
+
+  #minigutter {
+    display: block;
+  }
+}
+
+>>> .dashContainer {
+  font-family: "Roboto";
+  margin-right: 10px;
+}
+
+>>> .header {
+  padding: 1em;
+  color: white;
+  background-color: #ba8787;
+  margin-bottom: 1em;
+}
+
+>>> .dashContainer .header h1 {margin:0;}
+
+
+>>> .ui-inputgroup { margin: auto; position: relative; top: 11px;}

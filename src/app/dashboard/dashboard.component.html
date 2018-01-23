@@ -1,0 +1,22 @@
+<div class="ui-g">
+
+    <at-statistic label="Users" [value]="totalUsers" icon="fa-users" colour="#00ACAC" class="ui-g-12 ui-md-6 ui-lg-3"></at-statistic>
+
+    <at-statistic label="New Users" [value]="newUsers" icon="fa-plus" colour="#2F8EE5" class="ui-g-12 ui-md-6 ui-lg-3"></at-statistic>
+
+    <at-statistic label="Online" [value]="onlineUsers" icon="fa-plug" colour="#6C76AF" class="ui-g-12 ui-md-6 ui-lg-3"></at-statistic>
+
+    <at-statistic label="Broadcasting" [value]="broadcastUsers" icon="fa-wifi" colour="#EFA64C" class="ui-g-12 ui-md-6 ui-lg-3"></at-statistic>
+
+</div>
+
+<div class="ui-g">
+
+    <p-panel header="Newest" class="ui-g-12 ui-md-6">
+        <app-userstable [collection]="users"></app-userstable>
+    </p-panel>
+
+    <p-panel header="Broadcasting" class="ui-g-12 ui-md-6">
+        <app-userstable [collection]="broadcasters"></app-userstable>
+    </p-panel>
+</div>

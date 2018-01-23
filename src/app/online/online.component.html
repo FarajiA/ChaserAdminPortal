@@ -1,0 +1,18 @@
+<div class="dashContainer ui-g">
+    <div class="header ui-g-12">
+        <h1>Online</h1>
+    </div>
+    <div class="ui-g-12 ui-md-6 ui-lg-8">
+        <div class="ui-inputgroup">
+            <input type="text" pInputText [(ngModel)]="userFilter" (keyup.enter)="performFilter()" class="ui-inputtext ui-corner-all ui-state-default ui-widget" placeholder="Filter">
+            <button pButton type="button" (click)="performFilter()" class="ui-button-secondary ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" label="Search">
+                <i class="fa fa-search"></i>
+            </button>
+            <p-dropdown [options]="filterOptions" [(ngModel)]="selectedFilter"></p-dropdown>
+        </div>
+    </div>
+    <at-statistic label="Users" [value]="onlineUsers.total" icon="fa-plug" colour="#6C76AF" class="ui-g-12 ui-md-6 ui-lg-4"></at-statistic>
+    
+    <app-userstable [collection]="onlineUsers" (lazyEvent)="lazyLoad($event)" ></app-userstable>
+
+</div>

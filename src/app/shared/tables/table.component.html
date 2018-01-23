@@ -1,0 +1,17 @@
+<p-dataTable [totalRecords]="collection.total" [paginator]="collection.config.paginator" [loading]="collection.loading" [rows]="10" [lazy]="true" (onLazyLoad)="loadUsers($event)" [rowsPerPageOptions]="collection.config.rowsPerPage" [value]="collection.results">
+    <p-column field="firstName" header="First Name" [sortable]="collection.config.sortFirst" [hidden]="collection.config.firstCol"></p-column>
+    <p-column field="lastName" header="Last Name" [sortable]="collection.config.sortLast" [hidden]="collection.config.lastCol"></p-column>
+    <p-column field="username" header="Username" [sortable]="collection.config.sortUsername"></p-column>
+    <p-column field="email" header="Email" [sortable]="collection.config.sortUsername" [hidden]="collection.config.emailCol"></p-column>
+    <p-column field="active" header="Active" styleClass="activeCol"  [hidden]="collection.config.activeCol">
+        <ng-template let-col let-user="rowData" let-ri="rowIndex" pTemplate="body">
+            <i class="fa fa-check" *ngIf="user.active" aria-hidden="true"></i>
+            <i class="fa fa-times" *ngIf="!user.active" aria-hidden="true"></i>
+        </ng-template>
+    </p-column>
+    <p-column field="date" header="Date" [sortable]="collection.config.sortDate">
+        <ng-template let-col let-user="rowData" let-ri="rowIndex" pTemplate="body">
+            <span>{{user.date | date:'short' }}</span>
+        </ng-template>
+    </p-column>
+</p-dataTable>
