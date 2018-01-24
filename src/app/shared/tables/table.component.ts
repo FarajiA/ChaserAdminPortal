@@ -9,7 +9,7 @@ import { DatePipe } from '@angular/common';
 })
 export class DataTableComponent implements OnInit {
     
-    @Input() private collection: any;
+    @Input() collection: any;
     @Output() lazyEvent: EventEmitter<any> = new EventEmitter<any>();
     
     constructor() { }
